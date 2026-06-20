@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Faiber Andres Montes — Financial Engineer & AI Architect</title>
 <meta name="description" content="Senior Financial Engineer & AI/LLM Architect. MLOps Lead bridging high-stakes financial engineering with scalable, production-ready AI systems. Based in Medellín, Colombia.">
 <meta name="author" content="Faiber Andres Montes Gómez">
-<!-- Open Graph for LinkedIn sharing -->
 <meta property="og:title" content="Faiber Andres Montes — Financial Engineer & AI Architect">
 <meta property="og:description" content="Bridging high-stakes financial engineering with scalable, production-ready AI. 10+ years across finance & production AI.">
 <meta property="og:type" content="website">
@@ -16,126 +15,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ─── TOKENS ─────────────────────────────────────────────────────────── */
+/* ─── TOKENS ──────────────────────────────────────────────────────────── */
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f6f7f4;
-  --bg-dark: #0b1310;
-  --surface: #ffffff;
-  --border: #e6e8e4;
-  --border-soft: #ececea;
-  --text: #0b1310;
-  --text-muted: #4b574f;
-  --text-sub: #5d6b64;
-  --text-faint: #8a948e;
-  --accent: #0c9b6a;
-  --accent-dark: #087a53;
-  --accent-light: #eef9f3;
-  --accent-border: #d6e9df;
-  --tag-bg: #f1f4f1;
-  --tag-border: #e2e7e2;
-  --nav-bg: rgba(255,255,255,0.86);
-  --shadow: rgba(11,19,16,0.12);
-  --shadow-lg: rgba(11,19,16,0.32);
-  --toggle-icon: "🌙";
-  --hero-dot: rgba(12,155,106,0.18);
+  --bg:#ffffff;--bg-alt:#f6f7f4;--bg-dark:#0b1310;--surface:#ffffff;
+  --border:#e6e8e4;--border-soft:#ececea;--text:#0b1310;--text-muted:#4b574f;
+  --text-sub:#5d6b64;--text-faint:#8a948e;--accent:#0c9b6a;--accent-dark:#087a53;
+  --accent-light:#eef9f3;--accent-border:#d6e9df;--tag-bg:#f1f4f1;
+  --tag-border:#e2e7e2;--nav-bg:rgba(255,255,255,0.86);--shadow:rgba(11,19,16,.12);
+  --shadow-lg:rgba(11,19,16,.32);--hero-dot:rgba(12,155,106,.18);
 }
 [data-theme="dark"] {
-  --bg: #0d1512;
-  --bg-alt: #111a16;
-  --bg-dark: #070d0b;
-  --surface: #182118;
-  --border: #243020;
-  --border-soft: #1e2a1e;
-  --text: #e8f0eb;
-  --text-muted: #a0b4a8;
-  --text-sub: #8a9e92;
-  --text-faint: #5a6e62;
-  --accent: #0fba7e;
-  --accent-dark: #0d9a68;
-  --accent-light: rgba(15,186,126,0.12);
-  --accent-border: rgba(15,186,126,0.3);
-  --tag-bg: rgba(255,255,255,0.05);
-  --tag-border: rgba(255,255,255,0.1);
-  --nav-bg: rgba(13,21,18,0.9);
-  --shadow: rgba(0,0,0,0.4);
-  --shadow-lg: rgba(0,0,0,0.6);
-  --hero-dot: rgba(15,186,126,0.12);
+  --bg:#0d1512;--bg-alt:#111a16;--bg-dark:#070d0b;--surface:#182118;
+  --border:#243020;--border-soft:#1e2a1e;--text:#e8f0eb;--text-muted:#a0b4a8;
+  --text-sub:#8a9e92;--text-faint:#5a6e62;--accent:#0fba7e;--accent-dark:#0d9a68;
+  --accent-light:rgba(15,186,126,.12);--accent-border:rgba(15,186,126,.3);
+  --tag-bg:rgba(255,255,255,.05);--tag-border:rgba(255,255,255,.1);
+  --nav-bg:rgba(13,21,18,.9);--shadow:rgba(0,0,0,.4);--shadow-lg:rgba(0,0,0,.6);
+  --hero-dot:rgba(15,186,126,.12);
 }
-
-/* ─── RESET ───────────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
-  -webkit-font-smoothing:antialiased;
-  line-height:1.5;
-  transition:background .3s ease,color .3s ease;
-}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;transition:background .3s,color .3s}
 ::selection{background:var(--accent);color:#fff}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
-
-/* ─── UTILITIES ───────────────────────────────────────────────────────── */
-.container{max-width:1200px;margin:0 auto;padding:0 32px}
 .label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .heading{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-.03em;color:var(--text)}
 .tag{font-size:12.5px;font-weight:500;color:var(--text-muted);background:var(--tag-bg);border:1px solid var(--tag-border);padding:5px 11px;border-radius:8px;display:inline-block}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;transition:border-color .25s,box-shadow .25s,transform .25s}
-.card:hover{border-color:var(--accent-border);box-shadow:0 24px 50px -28px var(--shadow-lg);transform:translateY(-3px)}
-
-/* ─── SCROLL REVEAL ───────────────────────────────────────────────────── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1)}
 .reveal.visible{opacity:1;transform:none}
-.reveal-d1{transition-delay:.08s}
-.reveal-d2{transition-delay:.16s}
-.reveal-d3{transition-delay:.24s}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
 /* ─── NAV ─────────────────────────────────────────────────────────────── */
-header{
-  position:sticky;top:0;z-index:100;
-  backdrop-filter:saturate(180%) blur(14px);
-  -webkit-backdrop-filter:saturate(180%) blur(14px);
-  background:var(--nav-bg);
-  border-bottom:1px solid var(--border-soft);
-  transition:background .3s ease,border-color .3s ease;
-}
-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 32px;max-width:1200px;margin:0 auto}
+header{position:sticky;top:0;z-index:100;backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);background:var(--nav-bg);
+  border-bottom:1px solid var(--border-soft);transition:background .3s,border-color .3s}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 32px;max-width:1200px;margin:0 auto}
 .nav-logo{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--text)}
 .nav-logo-mark{width:30px;height:30px;border-radius:9px;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:13px;letter-spacing:-.04em;flex-shrink:0;transition:background .3s,color .3s}
-.nav-links{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:500;color:var(--text-muted)}
-.nav-links a{transition:color .2s}
-.nav-links a:hover{color:var(--accent)}
-.nav-right{display:flex;align-items:center;gap:12px}
-.btn-connect{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:var(--bg);font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;transition:transform .2s,background .2s,color .2s}
-.btn-connect:hover{background:var(--accent);transform:translateY(-1px)}
-/* Dark mode toggle */
-.theme-toggle{
-  width:40px;height:40px;border-radius:10px;border:1px solid var(--border);
-  background:var(--surface);color:var(--text-muted);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:16px;transition:all .2s;flex-shrink:0;
-}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14.5px;font-weight:500;color:var(--text-muted)}
+.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:10px}
+/* Lang toggle */
+.lang-toggle{display:flex;align-items:center;border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:13px;font-weight:700;flex-shrink:0}
+.lang-btn{padding:8px 11px;cursor:pointer;background:none;border:none;color:var(--text-faint);transition:background .2s,color .2s;letter-spacing:.04em;font-family:inherit}
+.lang-btn.active{background:var(--accent);color:#fff}
+.lang-sep{width:1px;background:var(--border);align-self:stretch}
+/* Theme toggle */
+.theme-toggle{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);
+  background:var(--surface);color:var(--text-muted);display:flex;align-items:center;
+  justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0}
 .theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
-/* Hamburger */
+.btn-connect{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:var(--bg);
+  font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;transition:transform .2s,background .2s,color .2s}
+.btn-connect:hover{background:var(--accent);transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;color:var(--text)}
-.hamburger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:all .3s}
+.hamburger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px}
 .mobile-menu{display:none;flex-direction:column;gap:4px;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 32px 16px}
 .mobile-menu a{font-size:15px;font-weight:500;color:var(--text-muted);padding:8px 0;border-bottom:1px solid var(--border);transition:color .2s}
-.mobile-menu a:last-child{border:none}
-.mobile-menu a:hover{color:var(--accent)}
+.mobile-menu a:last-child{border:none}.mobile-menu a:hover{color:var(--accent)}
 .mobile-menu.open{display:flex}
 
 /* ─── HERO ────────────────────────────────────────────────────────────── */
-#top{padding:80px 32px 48px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
+#top{padding:80px 32px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid var(--accent-border);background:var(--accent-light);border-radius:100px;font-size:13px;font-weight:600;color:var(--accent-dark);margin-bottom:26px}
 [data-theme="dark"] .hero-badge{color:var(--accent)}
 .hero-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--hero-dot);flex-shrink:0}
 .hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(38px,5vw,60px);line-height:1.04;letter-spacing:-.03em;color:var(--text);margin-bottom:22px}
-.hero-h1 span{color:var(--accent)}
+.hero-h1 .accent{color:var(--accent)}
 .hero-p{font-size:18.5px;line-height:1.6;color:var(--text-muted);max-width:540px;margin-bottom:34px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:38px}
 .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font-weight:600;font-size:15.5px;padding:14px 24px;border-radius:12px;box-shadow:0 8px 24px -8px rgba(12,155,106,.55);transition:transform .2s,box-shadow .2s,background .2s}
@@ -147,18 +96,17 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 .social-icon:hover{color:var(--accent);border-color:var(--accent)}
 .hero-divider{width:1px;height:26px;background:var(--border)}
 .hero-location{font-size:13.5px;color:var(--text-faint)}
-/* Portrait */
 .portrait-wrap{position:relative;display:flex;justify-content:center}
 .portrait-glow{position:absolute;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--accent-light) 0%,transparent 70%);top:6%}
 .portrait-ring{position:absolute;width:360px;height:360px;border-radius:50%;border:1.5px dashed var(--accent-border);top:0;animation:floatpulse 7s ease-in-out infinite}
-.portrait-img{position:relative;width:312px;height:312px;border-radius:50%;overflow:hidden;border:5px solid var(--surface);box-shadow:0 26px 60px -18px var(--shadow-lg);margin-top:24px}
+.portrait-img{position:relative;width:312px;height:312px;border-radius:50%;overflow:hidden;border:5px solid var(--surface);box-shadow:0 26px 60px -18px var(--shadow-lg);margin-top:24px;background:linear-gradient(135deg,var(--accent-light),var(--bg-alt))}
 .portrait-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .portrait-badge{position:absolute;bottom:8px;right:28px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 16px;box-shadow:0 14px 34px -14px var(--shadow-lg);display:flex;align-items:center;gap:11px}
 .portrait-badge-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:var(--accent)}
 .portrait-badge-text{font-size:12px;line-height:1.3;color:var(--text-sub);font-weight:500}
 @keyframes floatpulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
-/* ─── METRIC STRIP ────────────────────────────────────────────────────── */
+/* ─── METRICS ─────────────────────────────────────────────────────────── */
 #metrics{padding:24px 32px 0;max-width:1200px;margin:0 auto}
 .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:18px;overflow:hidden}
 .metric-cell{background:var(--surface);padding:26px 24px;transition:background .3s}
@@ -179,7 +127,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 /* ─── EXPERIENCE ──────────────────────────────────────────────────────── */
 #experience{background:var(--bg-alt);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
 .exp-inner{max-width:1200px;margin:0 auto;padding:96px 32px}
-.exp-list{display:flex;flex-direction:column;gap:0;margin-top:48px;position:relative}
+.exp-list{display:flex;flex-direction:column;margin-top:48px;position:relative}
 .exp-list::before{content:'';position:absolute;left:23px;top:8px;bottom:8px;width:2px;background:var(--border);border-radius:2px}
 .exp-item{display:grid;grid-template-columns:48px 1fr;gap:24px;padding-bottom:40px;position:relative}
 .exp-item:last-child{padding-bottom:0}
@@ -196,7 +144,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 .exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:13px;line-height:1.8}
 
 /* ─── CAPABILITIES ────────────────────────────────────────────────────── */
-#capabilities{background:var(--bg-alt);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+#capabilities{border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
 .cap-inner{max-width:1200px;margin:0 auto;padding:96px 32px}
 .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
 .cap-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
@@ -211,7 +159,6 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 .projects-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:44px}
 .btn-ghost{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--text);border:1px solid var(--border);padding:11px 18px;border-radius:11px;transition:border-color .2s,color .2s}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-/* Featured */
 .project-featured{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--border);border-radius:22px;overflow:hidden;background:var(--surface);margin-bottom:18px;transition:box-shadow .3s,border-color .3s}
 .project-featured:hover{box-shadow:0 30px 60px -30px var(--shadow-lg);border-color:var(--accent-border)}
 .project-featured-body{padding:40px}
@@ -220,17 +167,15 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 .project-h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-.02em;color:var(--text);margin-bottom:14px}
 .project-p{font-size:15.5px;line-height:1.6;color:var(--text-muted);margin-bottom:22px}
 .link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--accent)}
-/* Architecture panel */
 .arch-panel{background:var(--bg-dark);padding:38px;display:flex;flex-direction:column;justify-content:center;gap:12px}
 .arch-label{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.1em;color:#5fae93;text-transform:uppercase;margin-bottom:4px}
-.arch-block{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 14px}
-.arch-block-hl{background:rgba(12,155,106,0.16);border:1px solid rgba(12,155,106,0.4);border-radius:10px;padding:13px 14px}
+.arch-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 14px}
+.arch-block-hl{background:rgba(12,155,106,.16);border:1px solid rgba(12,155,106,.4);border-radius:10px;padding:13px 14px}
 .arch-name{font-size:12.5px;color:#e7ece9;font-weight:600}
 .arch-sub{font-size:11px;color:#7e8a85;margin-top:2px}
 .arch-arrow{text-align:center;color:#46544e;font-size:14px}
 .arch-row{display:flex;gap:10px}
 .arch-row .arch-block,.arch-row .arch-block-hl{flex:1;text-align:center}
-/* Project grid */
 .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .project-card{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:18px;padding:28px;background:var(--surface);transition:box-shadow .3s,border-color .3s,transform .3s}
 .project-card:hover{box-shadow:0 24px 50px -28px var(--shadow-lg);border-color:var(--accent-border);transform:translateY(-3px)}
@@ -256,7 +201,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:24px;paddi
 #contact{background:var(--bg-dark);color:#fff}
 .contact-inner{max-width:1200px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .contact-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid rgba(12,155,106,.4);background:rgba(12,155,106,.12);border-radius:100px;font-size:13px;font-weight:600;color:#7fe3bc;margin-bottom:26px}
-.contact-dot{width:8px;height:8px;border-radius:50%;background:#0c9b6a;box-shadow:0 0 0 4px rgba(12,155,106,.25)}
+.contact-dot{width:8px;height:8px;border-radius:50%;background:#0c9b6a;box-shadow:0 0 0 4px rgba(12,155,106,.25);flex-shrink:0}
 .contact-h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(32px,4vw,50px);line-height:1.06;letter-spacing:-.03em;margin-bottom:22px;color:#fff}
 .contact-p{font-size:17px;line-height:1.65;color:#aab4af;max-width:480px;margin-bottom:34px}
 .contact-links{display:flex;flex-wrap:wrap;gap:14px}
@@ -276,24 +221,15 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.08)}
 .footer-inner{max-width:1200px;margin:0 auto;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-copy{font-size:13.5px;color:#7e8a85}
 .footer-links{display:flex;gap:24px;font-size:13.5px;font-weight:500;color:#aab4af}
-.footer-links a{transition:color .2s}
-.footer-links a:hover{color:#0c9b6a}
+.footer-links a{transition:color .2s}.footer-links a:hover{color:#0c9b6a}
 
 /* ─── BACK TO TOP ─────────────────────────────────────────────────────── */
-.back-top{
-  position:fixed;bottom:28px;right:28px;z-index:200;
-  width:44px;height:44px;border-radius:12px;
-  background:var(--accent);color:#fff;border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 20px -8px rgba(12,155,106,.6);
-  opacity:0;pointer-events:none;
-  transition:opacity .3s,transform .3s;
-}
+.back-top{position:fixed;bottom:28px;right:28px;z-index:200;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(12,155,106,.6);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
 .back-top.show{opacity:1;pointer-events:auto}
 .back-top:hover{transform:translateY(-2px)}
 
 /* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
-@media(max-width:900px){
+@media(max-width:960px){
   nav{padding:14px 20px}
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -308,8 +244,7 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.08)}
   #impact{padding:64px 20px 40px}
   .impact-grid{grid-template-columns:1fr;gap:32px}
   .impact-sticky{position:static}
-  .exp-inner{padding:64px 20px}
-  .cap-inner{padding:64px 20px}
+  .exp-inner,.cap-inner{padding:64px 20px}
   .cap-grid{grid-template-columns:1fr}
   #projects{padding:64px 20px 40px}
   .project-featured{grid-template-columns:1fr}
@@ -319,28 +254,26 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.08)}
   .cred-grid{grid-template-columns:1fr}
   .contact-inner{grid-template-columns:1fr;gap:40px;padding:64px 20px}
   .footer-inner{padding:20px}
-  .container{padding:0 20px}
   .back-top{bottom:20px;right:20px}
 }
 @media(max-width:480px){
   .metrics-grid{grid-template-columns:1fr 1fr}
-  .hero-actions{flex-direction:column}
-  .btn-primary,.btn-secondary{justify-content:center}
-  .projects-header{flex-direction:column;align-items:flex-start}
-  .further-training{flex-direction:column;align-items:flex-start}
-  .contact-links{flex-direction:column}
-  .btn-cta,.btn-cta-outline{justify-content:center}
+  .hero-actions,.contact-links{flex-direction:column}
+  .btn-primary,.btn-secondary,.btn-cta,.btn-cta-outline{justify-content:center}
+  .projects-header,.further-training{flex-direction:column;align-items:flex-start}
+  .nav-right{gap:7px}
+  .lang-btn{padding:7px 9px;font-size:12px}
+  .btn-connect{display:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ─── BACK TO TOP ────────────────────────────────────────────────────── -->
 <button class="back-top" id="backTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
-<!-- ─── NAV ─────────────────────────────────────────────────────────────── -->
+<!-- NAV -->
 <header>
   <nav>
     <a href="#top" class="nav-logo">
@@ -348,59 +281,59 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.08)}
       Faiber Montes
     </a>
     <div class="nav-links">
-      <a href="#impact">Impact</a>
-      <a href="#experience">Experience</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#projects">Projects</a>
-      <a href="#credentials">Credentials</a>
+      <a href="#impact"       data-i18n="nav.impact">Impact</a>
+      <a href="#experience"   data-i18n="nav.experience">Experience</a>
+      <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
+      <a href="#projects"     data-i18n="nav.projects">Projects</a>
+      <a href="#credentials"  data-i18n="nav.credentials">Credentials</a>
     </div>
     <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+        <span class="lang-sep"></span>
+        <button class="lang-btn" id="btnES" onclick="setLang('es')">ES</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <svg id="iconMoon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg id="iconSun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="iconSun"  width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
-      <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="btn-connect">
-        Connect
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </a>
+      <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="btn-connect" data-i18n="nav.connect">Connect</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#impact" onclick="closeMobile()">Impact</a>
-    <a href="#experience" onclick="closeMobile()">Experience</a>
-    <a href="#capabilities" onclick="closeMobile()">Capabilities</a>
-    <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#credentials" onclick="closeMobile()">Credentials</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="#impact"       onclick="closeMobile()" data-i18n="nav.impact">Impact</a>
+    <a href="#experience"   onclick="closeMobile()" data-i18n="nav.experience">Experience</a>
+    <a href="#capabilities" onclick="closeMobile()" data-i18n="nav.capabilities">Capabilities</a>
+    <a href="#projects"     onclick="closeMobile()" data-i18n="nav.projects">Projects</a>
+    <a href="#credentials"  onclick="closeMobile()" data-i18n="nav.credentials">Credentials</a>
+    <a href="#contact"      onclick="closeMobile()" data-i18n="nav.contact">Contact</a>
   </div>
 </header>
 
-<!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
+<!-- HERO -->
 <section id="top">
   <div class="reveal">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Open to senior Fintech &amp; AI roles · Remote / Medellín (UTC−5)
+      <span data-i18n="hero.badge">Open to senior Fintech &amp; AI roles · Remote / Medellín (UTC−5)</span>
     </div>
     <h1 class="hero-h1">
-      Financial Engineer<span>.</span><br>
-      AI &amp; LLM Architect<span>.</span><br>
-      MLOps Lead<span>.</span>
+      <span data-i18n="hero.title1">Financial Engineer</span><span class="accent">.</span><br>
+      <span data-i18n="hero.title2">AI &amp; LLM Architect</span><span class="accent">.</span><br>
+      <span data-i18n="hero.title3">MLOps Lead</span><span class="accent">.</span>
     </h1>
-    <p class="hero-p">
-      Bridging high-stakes financial engineering with scalable, production-ready AI. I lead the <strong>"Production Premium"</strong> — turning models into high-availability systems that move real capital.
-    </p>
+    <p class="hero-p" data-i18n="hero.desc">Bridging high-stakes financial engineering with scalable, production-ready AI. I lead the <strong>"Production Premium"</strong> — turning models into high-availability systems that move real capital.</p>
     <div class="hero-actions">
       <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.66V10.4H6.06v7.26h2.28zM7.2 9.42a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zm10.74 8.24v-4.16c0-2.22-1.18-3.26-2.76-3.26-1.27 0-1.84.7-2.16 1.19v-1.02h-2.28c.03.64 0 7.26 0 7.26h2.28v-4.05c0-.21.02-.41.08-.56.16-.41.54-.84 1.17-.84.83 0 1.16.63 1.16 1.55v3.9h2.27z"/></svg>
-        Connect on LinkedIn
+        <span data-i18n="hero.linkedin">Connect on LinkedIn</span>
       </a>
       <a href="assets/Faiber-Andres-Montes-CV.docx" download class="btn-secondary">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-        Download CV
+        <span data-i18n="hero.cv">Download CV</span>
       </a>
     </div>
     <div class="hero-social">
@@ -414,583 +347,493 @@ footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.08)}
       <span class="hero-location">Medellín, Colombia · andresmono1986@hotmail.com</span>
     </div>
   </div>
-
   <div class="portrait-wrap reveal reveal-d1">
     <div class="portrait-glow"></div>
     <div class="portrait-ring"></div>
     <div class="portrait-img">
-      <img src="assets/portrait.png" alt="Faiber Andres Montes Gómez" onerror="this.parentElement.style.background='linear-gradient(135deg,#eef9f3 0%,#c8e6d8 100%)';this.style.display='none'">
+      <img src="assets/portrait.png" alt="Faiber Andres Montes Gómez" onerror="this.style.display='none'">
     </div>
     <div class="portrait-badge">
       <span class="portrait-badge-num">10+</span>
-      <span class="portrait-badge-text">yrs across finance<br>&amp; production AI</span>
+      <span class="portrait-badge-text" data-i18n="hero.badge_years">yrs across finance<br>&amp; production AI</span>
     </div>
   </div>
 </section>
 
-<!-- ─── METRICS ───────────────────────────────────────────────────────────── -->
+<!-- METRICS -->
 <section id="metrics">
   <div class="metrics-grid reveal">
-    <div class="metric-cell">
-      <div class="metric-num"><span data-count="40" data-suffix="%">40%</span></div>
-      <div class="metric-label">latency reduction on risk models</div>
-    </div>
-    <div class="metric-cell">
-      <div class="metric-num"><span data-count="1000" data-suffix="+">1,000+</span></div>
-      <div class="metric-label">professionals trained in AI</div>
-    </div>
-    <div class="metric-cell">
-      <div class="metric-num"><span data-count="200" data-prefix="$" data-suffix="K+">$200K+</span></div>
-      <div class="metric-label">annual savings delivered</div>
-    </div>
-    <div class="metric-cell">
-      <div class="metric-num"><span data-count="15" data-suffix="h/wk">15h/wk</span></div>
-      <div class="metric-label">manual work automated</div>
-    </div>
+    <div class="metric-cell"><div class="metric-num"><span data-count="40" data-suffix="%">40%</span></div><div class="metric-label" data-i18n="metrics.latency">latency reduction on risk models</div></div>
+    <div class="metric-cell"><div class="metric-num"><span data-count="1000" data-suffix="+">1,000+</span></div><div class="metric-label" data-i18n="metrics.trained">professionals trained in AI</div></div>
+    <div class="metric-cell"><div class="metric-num"><span data-count="200" data-prefix="$" data-suffix="K+">$200K+</span></div><div class="metric-label" data-i18n="metrics.savings">annual savings delivered</div></div>
+    <div class="metric-cell"><div class="metric-num"><span data-count="15" data-suffix="h/wk">15h/wk</span></div><div class="metric-label" data-i18n="metrics.automated">manual work automated</div></div>
   </div>
 </section>
 
-<!-- ─── IMPACT ────────────────────────────────────────────────────────────── -->
-<section id="impact" style="padding-top:104px">
+<!-- IMPACT -->
+<section id="impact">
   <div class="impact-grid">
     <div class="impact-sticky reveal">
-      <div class="label">Impact Narrative</div>
-      <h2 class="heading" style="margin-bottom:22px">Scaling impact<br>from code to capital</h2>
-      <p style="font-size:17px;line-height:1.65;color:var(--text-muted);max-width:420px">A leader in scaling high-availability APIs with <strong>Python, FastAPI, Docker &amp; Snowflake</strong> — translating financial risk into production-ready AI. From legacy model migration to enterprise AI enablement, I ship systems that hold up under real money and real load.</p>
+      <div class="label" data-i18n="impact.label">Impact Narrative</div>
+      <h2 class="heading" style="margin-bottom:22px" data-i18n="impact.title">Scaling impact<br>from code to capital</h2>
+      <p style="font-size:17px;line-height:1.65;color:var(--text-muted);max-width:420px" data-i18n="impact.desc">A leader in scaling high-availability APIs with <strong>Python, FastAPI, Docker &amp; Snowflake</strong> — translating financial risk into production-ready AI.</p>
     </div>
     <div class="impact-body reveal reveal-d1">
-      <div class="impact-card">
-        <div class="impact-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6"/><path d="M21 7h-6"/></svg>
-        </div>
-        <div>
-          <div class="impact-title">40% latency reduction at N-iX</div>
-          <p class="impact-desc">Migrated legacy R credit-risk models to production Python on FastAPI, enabling real-time, API-based scoring with 90% test coverage.</p>
-        </div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <div>
-          <div class="impact-title">AI enablement for 1,000+ leaders</div>
-          <p class="impact-desc">Catalyzed AI adoption at CESDE — teaching RAG and Prompt Engineering workflows that drove 25% productivity gains, with Responsible-AI governance.</p>
-        </div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div>
-          <div class="impact-title">$200K+ saved at Colanta</div>
-          <p class="impact-desc">Deployed PyTorch &amp; Scikit-learn demand-prediction models (+15% accuracy) and surfaced $50K+ in tax irregularities via PySpark on AWS.</p>
-        </div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-        </div>
-        <div>
-          <div class="impact-title">Autonomous agents, −15 hrs/week</div>
-          <p class="impact-desc">Built RAG chatbots and research agents with LangChain, OpenAI/Claude and vector DBs (Pinecone, Chroma) — automating 100% of weekly reporting.</p>
-        </div>
-      </div>
+      <div class="impact-card"><div class="impact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6"/><path d="M21 7h-6"/></svg></div><div><div class="impact-title" data-i18n="impact.i1.title">40% latency reduction at N-iX</div><p class="impact-desc" data-i18n="impact.i1.desc">Migrated legacy R credit-risk models to production Python on FastAPI, enabling real-time, API-based scoring with 90% test coverage.</p></div></div>
+      <div class="impact-card"><div class="impact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><div class="impact-title" data-i18n="impact.i2.title">AI enablement for 1,000+ leaders</div><p class="impact-desc" data-i18n="impact.i2.desc">Catalyzed AI adoption at CESDE — teaching RAG and Prompt Engineering workflows that drove 25% productivity gains.</p></div></div>
+      <div class="impact-card"><div class="impact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="impact-title" data-i18n="impact.i3.title">$200K+ saved at Colanta</div><p class="impact-desc" data-i18n="impact.i3.desc">Deployed PyTorch &amp; Scikit-learn demand-prediction models (+15% accuracy) and surfaced $50K+ in tax irregularities via PySpark on AWS.</p></div></div>
+      <div class="impact-card"><div class="impact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><div><div class="impact-title" data-i18n="impact.i4.title">Autonomous agents, −15 hrs/week</div><p class="impact-desc" data-i18n="impact.i4.desc">Built RAG chatbots and research agents with LangChain, OpenAI/Claude and vector DBs — automating 100% of weekly reporting.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ─── EXPERIENCE ────────────────────────────────────────────────────────── -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="exp-inner">
-    <div class="reveal">
-      <div class="label">Work Experience</div>
-      <h2 class="heading">Career timeline</h2>
-    </div>
+    <div class="reveal"><div class="label" data-i18n="exp.label">Work Experience</div><h2 class="heading" data-i18n="exp.title">Career timeline</h2></div>
     <div class="exp-list">
-
       <div class="exp-item reveal">
-        <div class="exp-dot">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
+        <div class="exp-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-role">Data Specialist & AI Engineer</div>
-            <span class="exp-period">Mar 2026 – Present</span>
-          </div>
-          <div class="exp-company">Freelance · Medellín</div>
+          <div class="exp-header"><div class="exp-role" data-i18n="exp.e1.role">Data Specialist &amp; AI Engineer</div><span class="exp-period" data-i18n="exp.e1.period">Mar 2026 – Present</span></div>
+          <div class="exp-company" data-i18n="exp.e1.company">Freelance · Medellín</div>
           <ul class="exp-bullets">
-            <li>Architected automated research and content generation agents using LangChain and OpenAI/Claude APIs, reducing manual administrative workflows by 15 hours per week.</li>
-            <li>Implemented AI governance and safety protocols, educating stakeholders on hallucination mitigation, bias detection, and ethical data privacy in LLM deployments.</li>
-            <li>Built and deployed custom RAG-based chatbots and financial analysis agents using FastAPI and Vector Databases (Pinecone, Chroma), automating 100% of weekly reporting for corporate clients.</li>
+            <li data-i18n="exp.e1.b1">Architected automated research and content generation agents using LangChain and OpenAI/Claude APIs, reducing manual workflows by 15 hours per week.</li>
+            <li data-i18n="exp.e1.b2">Implemented AI governance and safety protocols, educating stakeholders on hallucination mitigation, bias detection, and ethical data privacy in LLM deployments.</li>
+            <li data-i18n="exp.e1.b3">Built and deployed custom RAG-based chatbots and financial analysis agents using FastAPI and Vector Databases (Pinecone, Chroma), automating 100% of weekly reporting.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
-        <div class="exp-dot">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
+        <div class="exp-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-role">AI Instructor</div>
-            <span class="exp-period">Oct – Dec 2025</span>
-          </div>
-          <div class="exp-company">CESDE · Medellín</div>
+          <div class="exp-header"><div class="exp-role" data-i18n="exp.e2.role">AI Instructor</div><span class="exp-period" data-i18n="exp.e2.period">Oct – Dec 2025</span></div>
+          <div class="exp-company" data-i18n="exp.e2.company">CESDE · Medellín</div>
           <ul class="exp-bullets">
-            <li>Led the AI Enablement strategy for over 500 non-technical professionals, teaching advanced Prompt Engineering and RAG workflows to boost operational productivity by 25%.</li>
-            <li>Developed and delivered a curriculum on Responsible AI, focusing on bias mitigation, data privacy, and ethical LLM integration (ChatGPT, Claude, Gemini) for corporate leadership.</li>
-            <li>Automated administrative and research workflows for students using no-code/low-code AI tools, reducing manual task time by an average of 15 hours per week per student.</li>
+            <li data-i18n="exp.e2.b1">Led the AI Enablement strategy for over 500 professionals, teaching Prompt Engineering and RAG workflows to boost operational productivity by 25%.</li>
+            <li data-i18n="exp.e2.b2">Developed curriculum on Responsible AI — bias mitigation, data privacy, and ethical LLM integration (ChatGPT, Claude, Gemini) for corporate leadership.</li>
+            <li data-i18n="exp.e2.b3">Automated administrative workflows using no-code/low-code AI tools, reducing manual task time by 15 hours per week per student.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
-        <div class="exp-dot">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 0 0-11.3-2.8A4.5 4.5 0 0 0 7 16h10a4 4 0 0 0 1-7.9z"/></svg>
-        </div>
+        <div class="exp-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 0 0-11.3-2.8A4.5 4.5 0 0 0 7 16h10a4 4 0 0 0 1-7.9z"/></svg></div>
         <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-role">Data Engineer & Python Developer</div>
-            <span class="exp-period">Dec 2024 – Aug 2025</span>
-          </div>
-          <div class="exp-company">N-iX · Medellín</div>
+          <div class="exp-header"><div class="exp-role" data-i18n="exp.e3.role">Data Engineer &amp; Python Developer</div><span class="exp-period" data-i18n="exp.e3.period">Dec 2024 – Aug 2025</span></div>
+          <div class="exp-company" data-i18n="exp.e3.company">N-iX · Medellín</div>
           <ul class="exp-bullets">
-            <li>Orchestrated migration of complex credit risk models from legacy R to production-grade Python (FastAPI), reducing execution latency by 40% and enabling real-time API-based scoring.</li>
-            <li>Architected automated ETL/ELT pipelines on AWS (Glue, S3, Redshift) to process multi-terabyte logistics datasets, ensuring 99.9% data integrity for global supply chain reporting.</li>
-            <li>Engineered a robust testing suite using Pytest, achieving 90% code coverage and eliminating critical bugs in high-stakes financial data catalogs.</li>
-            <li>Optimized SQL query performance and data modeling (Star Schema), resulting in a 25% reduction in cloud compute costs and faster BI dashboard refreshes.</li>
+            <li data-i18n="exp.e3.b1">Orchestrated migration of credit risk models from legacy R to production Python (FastAPI), reducing latency by 40% and enabling real-time API-based scoring.</li>
+            <li data-i18n="exp.e3.b2">Architected ETL/ELT pipelines on AWS (Glue, S3, Redshift) to process multi-terabyte datasets, ensuring 99.9% data integrity for global supply chain reporting.</li>
+            <li data-i18n="exp.e3.b3">Engineered testing suite with Pytest — 90% code coverage, eliminating critical bugs in high-stakes financial data catalogs.</li>
+            <li data-i18n="exp.e3.b4">Optimized SQL and data modeling (Star Schema), reducing cloud compute costs by 25% and accelerating BI dashboard refreshes.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
-        <div class="exp-dot">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg>
-        </div>
+        <div class="exp-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg></div>
         <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-role">Data Specialist & Financial Engineer</div>
-            <span class="exp-period">Feb 2023 – Dec 2024</span>
-          </div>
-          <div class="exp-company">Freelance · Medellín</div>
+          <div class="exp-header"><div class="exp-role" data-i18n="exp.e4.role">Data Specialist &amp; Financial Engineer</div><span class="exp-period" data-i18n="exp.e4.period">Feb 2023 – Dec 2024</span></div>
+          <div class="exp-company" data-i18n="exp.e4.company">Freelance · Medellín</div>
           <ul class="exp-bullets">
-            <li>Designed and implemented custom financial dashboards and REST APIs (FastAPI) for corporate clients, automating 100% of weekly financial reporting cycles.</li>
-            <li>Built predictive time-series models for economic variable forecasting, outperforming previous manual benchmarks by 20% in predictive accuracy.</li>
-            <li>Managed Snowflake &amp; AWS environments for mid-sized firms, implementing DataOps best practices that reduced data downtime by 65%.</li>
+            <li data-i18n="exp.e4.b1">Designed financial dashboards and REST APIs (FastAPI) for corporate clients, automating 100% of weekly financial reporting cycles.</li>
+            <li data-i18n="exp.e4.b2">Built predictive time-series models, outperforming manual benchmarks by 20% in predictive accuracy.</li>
+            <li data-i18n="exp.e4.b3">Managed Snowflake &amp; AWS environments implementing DataOps best practices that reduced data downtime by 65%.</li>
           </ul>
         </div>
       </div>
-
       <div class="exp-item reveal">
-        <div class="exp-dot">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
+        <div class="exp-dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <div class="exp-content">
-          <div class="exp-header">
-            <div class="exp-role">Data Scientist & Project Finance Analyst</div>
-            <span class="exp-period">Aug 2021 – Jan 2023</span>
-          </div>
-          <div class="exp-company">Colanta · Medellín</div>
+          <div class="exp-header"><div class="exp-role" data-i18n="exp.e5.role">Data Scientist &amp; Project Finance Analyst</div><span class="exp-period" data-i18n="exp.e5.period">Aug 2021 – Jan 2023</span></div>
+          <div class="exp-company" data-i18n="exp.e5.company">Colanta · Medellín</div>
           <ul class="exp-bullets">
-            <li>Developed and deployed demand-prediction models using PyTorch and Scikit-learn, increasing accuracy by 15% and saving an estimated $200K in annual logistics waste.</li>
-            <li>Leveraged PySpark on AWS to process and analyze large-scale accounting datasets, identifying $50K+ in tax-related irregularities through advanced feature engineering.</li>
-            <li>Visualized critical financial KPIs for executive stakeholders using Power BI and Qlik Sense, reducing time-to-insight for quarterly risk assessments from days to minutes.</li>
+            <li data-i18n="exp.e5.b1">Deployed demand-prediction models using PyTorch and Scikit-learn (+15% accuracy), saving an estimated $200K in annual logistics waste.</li>
+            <li data-i18n="exp.e5.b2">Used PySpark on AWS to process large-scale accounting datasets, identifying $50K+ in tax-related irregularities via advanced feature engineering.</li>
+            <li data-i18n="exp.e5.b3">Visualized financial KPIs with Power BI and Qlik Sense, reducing time-to-insight for quarterly risk assessments from days to minutes.</li>
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ─── CAPABILITIES ──────────────────────────────────────────────────────── -->
+<!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="cap-inner">
-    <div class="reveal" style="max-width:640px;margin-bottom:0">
-      <div class="label">Capabilities Matrix</div>
-      <h2 class="heading">Four disciplines,<br>one production mindset</h2>
+    <div class="reveal" style="max-width:640px">
+      <div class="label" data-i18n="cap.label">Capabilities Matrix</div>
+      <h2 class="heading" data-i18n="cap.title">Four disciplines,<br>one production mindset</h2>
     </div>
     <div class="cap-grid">
       <div class="cap-card reveal">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-          <div class="cap-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
-          </div>
-          <h3 class="cap-title">AI &amp; LLM Specialist</h3>
-        </div>
-        <p class="cap-desc">Designing reliable LLM systems — from retrieval to guardrails — for high-stakes financial use.</p>
-        <div class="tags">
-          <span class="tag">RAG Pipelines</span>
-          <span class="tag">Agent Architectures</span>
-          <span class="tag">Hallucination Mitigation</span>
-          <span class="tag">Prompt Engineering</span>
-          <span class="tag">LangChain / OpenAI</span>
-          <span class="tag">Ethical AI</span>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px"><div class="cap-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg></div><h3 class="cap-title" data-i18n="cap.c1.title">AI &amp; LLM Specialist</h3></div>
+        <p class="cap-desc" data-i18n="cap.c1.desc">Designing reliable LLM systems — from retrieval to guardrails — for high-stakes financial use.</p>
+        <div class="tags"><span class="tag">RAG Pipelines</span><span class="tag">Agent Architectures</span><span class="tag">Hallucination Mitigation</span><span class="tag">Prompt Engineering</span><span class="tag">LangChain / OpenAI</span><span class="tag">Ethical AI</span></div>
       </div>
       <div class="cap-card reveal reveal-d1">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-          <div class="cap-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 0 0-11.3-2.8A4.5 4.5 0 0 0 7 16h10a4 4 0 0 0 1-7.9z"/><path d="M12 12v5M9.5 14.5L12 17l2.5-2.5"/></svg>
-          </div>
-          <h3 class="cap-title">MLOps &amp; Data Architecture</h3>
-        </div>
-        <p class="cap-desc">Shipping high-availability systems with reproducible pipelines and infrastructure as code.</p>
-        <div class="tags">
-          <span class="tag">Docker</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Snowflake</span>
-          <span class="tag">AWS</span>
-          <span class="tag">MLflow</span>
-          <span class="tag">ETL / ELT</span>
-          <span class="tag">Airflow</span>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px"><div class="cap-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 0 0-11.3-2.8A4.5 4.5 0 0 0 7 16h10a4 4 0 0 0 1-7.9z"/><path d="M12 12v5M9.5 14.5L12 17l2.5-2.5"/></svg></div><h3 class="cap-title" data-i18n="cap.c2.title">MLOps &amp; Data Architecture</h3></div>
+        <p class="cap-desc" data-i18n="cap.c2.desc">Shipping high-availability systems with reproducible pipelines and infrastructure as code.</p>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">Kubernetes</span><span class="tag">Snowflake</span><span class="tag">AWS</span><span class="tag">MLflow</span><span class="tag">ETL / ELT</span><span class="tag">Airflow</span></div>
       </div>
       <div class="cap-card reveal reveal-d1">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-          <div class="cap-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg>
-          </div>
-          <h3 class="cap-title">Financial Engineering</h3>
-        </div>
-        <p class="cap-desc">Quantitative risk and forecasting grounded in formal financial engineering training.</p>
-        <div class="tags">
-          <span class="tag">Risk Management</span>
-          <span class="tag">VaR Modeling</span>
-          <span class="tag">Stochastic Risk Analysis</span>
-          <span class="tag">Time-Series Forecasting</span>
-          <span class="tag">Tax Compliance Algorithms</span>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px"><div class="cap-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg></div><h3 class="cap-title" data-i18n="cap.c3.title">Financial Engineering</h3></div>
+        <p class="cap-desc" data-i18n="cap.c3.desc">Quantitative risk and forecasting grounded in formal financial engineering training.</p>
+        <div class="tags"><span class="tag">Risk Management</span><span class="tag">VaR Modeling</span><span class="tag">Stochastic Risk Analysis</span><span class="tag">Time-Series Forecasting</span><span class="tag">Tax Compliance</span></div>
       </div>
       <div class="cap-card reveal reveal-d2">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
-          <div class="cap-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4a3 3 0 0 1 0 6M21 20c0-2.5-1.5-4.7-3.7-5.6"/></svg>
-          </div>
-          <h3 class="cap-title">Leadership &amp; Training</h3>
-        </div>
-        <p class="cap-desc">Turning non-technical organizations into AI-fluent teams through hands-on enablement.</p>
-        <div class="tags">
-          <span class="tag">AI Enablement</span>
-          <span class="tag">Stakeholder Education</span>
-          <span class="tag">Team Leadership</span>
-          <span class="tag">Operational Strategy</span>
-          <span class="tag">Upskilling Programs</span>
-        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px"><div class="cap-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4a3 3 0 0 1 0 6M21 20c0-2.5-1.5-4.7-3.7-5.6"/></svg></div><h3 class="cap-title" data-i18n="cap.c4.title">Leadership &amp; Training</h3></div>
+        <p class="cap-desc" data-i18n="cap.c4.desc">Turning non-technical organizations into AI-fluent teams through hands-on enablement.</p>
+        <div class="tags"><span class="tag">AI Enablement</span><span class="tag">Stakeholder Education</span><span class="tag">Team Leadership</span><span class="tag">Operational Strategy</span><span class="tag">Upskilling Programs</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PROJECTS ──────────────────────────────────────────────────────────── -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="projects-header reveal">
-    <div style="max-width:640px">
-      <div class="label">Featured Work · Latest from GitHub</div>
-      <h2 class="heading">Engineering solutions, shipped</h2>
-    </div>
-    <a href="https://github.com/faiber1986" target="_blank" rel="noopener" class="btn-ghost">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.64 3 8.57 7.18 9.96.53.1.72-.23.72-.5v-1.76c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.88 1.07a9.96 9.96 0 0 1 5.24 0c2-1.35 2.88-1.07 2.88-1.07.57 1.45.21 2.52.1 2.79.67.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 22.5 12 10.5 10.5 0 0 0 12 1.5z"/></svg>
-      @faiber1986
-    </a>
+    <div style="max-width:640px"><div class="label" data-i18n="proj.label">Featured Work · Latest from GitHub</div><h2 class="heading" data-i18n="proj.title">Engineering solutions, shipped</h2></div>
+    <a href="https://github.com/faiber1986" target="_blank" rel="noopener" class="btn-ghost"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.64 3 8.57 7.18 9.96.53.1.72-.23.72-.5v-1.76c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.88 1.07a9.96 9.96 0 0 1 5.24 0c2-1.35 2.88-1.07 2.88-1.07.57 1.45.21 2.52.1 2.79.67.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 22.5 12 10.5 10.5 0 0 0 12 1.5z"/></svg>@faiber1986</a>
   </div>
-
-  <!-- Featured -->
   <a href="https://github.com/faiber1986/finsight-ai" target="_blank" rel="noopener" class="project-featured reveal">
     <div class="project-featured-body">
-      <div class="flagship-badge">★ FLAGSHIP PROJECT</div>
+      <div class="flagship-badge" data-i18n="proj.flagship">★ FLAGSHIP PROJECT</div>
       <h3 class="project-h3">FinSight AI</h3>
-      <p class="project-p">An end-to-end investment-intelligence platform: four classical-ML modules — portfolio optimization, price forecasting, credit-risk scoring and market sentiment — unified by an LLM assistant, with full MLOps + LLMOps observability.</p>
-      <div class="tags" style="margin-bottom:26px">
-        <span class="tag" style="font-weight:600">MLflow</span>
-        <span class="tag" style="font-weight:600">vLLM + Langfuse</span>
-        <span class="tag" style="font-weight:600">FastAPI</span>
-        <span class="tag" style="font-weight:600">Kubernetes</span>
-        <span class="tag" style="font-weight:600">Terraform · AWS</span>
-      </div>
-      <span class="link-arrow">View repository
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </span>
+      <p class="project-p" data-i18n="proj.finsight.desc">An end-to-end investment-intelligence platform: four ML modules — portfolio optimization, price forecasting, credit-risk scoring and market sentiment — unified by an LLM assistant, with full MLOps + LLMOps observability.</p>
+      <div class="tags" style="margin-bottom:26px"><span class="tag" style="font-weight:600">MLflow</span><span class="tag" style="font-weight:600">vLLM + Langfuse</span><span class="tag" style="font-weight:600">FastAPI</span><span class="tag" style="font-weight:600">Kubernetes</span><span class="tag" style="font-weight:600">Terraform · AWS</span></div>
+      <span class="link-arrow" data-i18n="proj.view">View repository <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
     </div>
     <div class="arch-panel">
-      <div class="arch-label">System architecture</div>
-      <div class="arch-row">
-        <div class="arch-block"><div class="arch-name">Frontend · React</div><div class="arch-sub">Investment dashboard</div></div>
-      </div>
+      <div class="arch-label" data-i18n="proj.arch">System architecture</div>
+      <div class="arch-row"><div class="arch-block"><div class="arch-name">Frontend · React</div><div class="arch-sub" data-i18n="proj.arch.frontend">Investment dashboard</div></div></div>
       <div class="arch-arrow">↓</div>
       <div class="arch-block-hl"><div class="arch-name" style="color:#aef0d6">FastAPI Backend</div><div class="arch-sub">/portfolio · /forecast · /credit · /sentiment · /chat</div></div>
-      <div class="arch-row">
-        <div class="arch-block"><div class="arch-name">ML Registry</div><div class="arch-sub">MLflow · DVC</div></div>
-        <div class="arch-block"><div class="arch-name">LLM Service</div><div class="arch-sub">vLLM · Langfuse</div></div>
-      </div>
-      <div class="arch-row">
-        <div class="arch-block"><div class="arch-name">Airflow DAGs</div><div class="arch-sub">Retraining</div></div>
-        <div class="arch-block"><div class="arch-name">EKS · Docker</div><div class="arch-sub">Terraform IaC</div></div>
-      </div>
+      <div class="arch-row"><div class="arch-block"><div class="arch-name">ML Registry</div><div class="arch-sub">MLflow · DVC</div></div><div class="arch-block"><div class="arch-name">LLM Service</div><div class="arch-sub">vLLM · Langfuse</div></div></div>
+      <div class="arch-row"><div class="arch-block"><div class="arch-name">Airflow DAGs</div><div class="arch-sub" data-i18n="proj.arch.retrain">Retraining</div></div><div class="arch-block"><div class="arch-name">EKS · Docker</div><div class="arch-sub">Terraform IaC</div></div></div>
     </div>
   </a>
-
-  <!-- Grid -->
   <div class="project-grid">
     <a href="https://github.com/faiber1986/terrasignal" target="_blank" rel="noopener" class="project-card reveal">
-      <div class="project-card-header">
-        <h3 class="project-card-h3">TerraSignal</h3>
-        <span class="project-badge">CRE Risk</span>
-      </div>
-      <p class="project-card-p">Commercial real-estate rent forecasting and tenant default-risk scoring — paired with an agentic lease-abstraction pipeline that reads and structures lease documents.</p>
-      <div class="tags" style="margin-bottom:18px">
-        <span class="tag">Python</span><span class="tag">Agentic AI</span><span class="tag">Forecasting</span>
-      </div>
-      <span class="link-arrow" style="font-size:13.5px">View repository
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </span>
+      <div class="project-card-header"><h3 class="project-card-h3">TerraSignal</h3><span class="project-badge">CRE Risk</span></div>
+      <p class="project-card-p" data-i18n="proj.terra.desc">Commercial real-estate rent forecasting and tenant default-risk scoring — paired with an agentic lease-abstraction pipeline that reads and structures lease documents.</p>
+      <div class="tags" style="margin-bottom:18px"><span class="tag">Python</span><span class="tag">Agentic AI</span><span class="tag">Forecasting</span></div>
+      <span class="link-arrow" style="font-size:13.5px" data-i18n="proj.view">View repository <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
     </a>
     <a href="https://github.com/faiber1986/Finance-Tracker" target="_blank" rel="noopener" class="project-card reveal reveal-d1">
-      <div class="project-card-header">
-        <h3 class="project-card-h3">Finance Tracker</h3>
-        <span class="project-badge">Live Demo</span>
-      </div>
-      <p class="project-card-p">A full-stack personal finance tracker — Next.js 14 front end, FastAPI service and PostgreSQL — containerized with Docker and deployed to production on Vercel + Railway.</p>
-      <div class="tags" style="margin-bottom:18px">
-        <span class="tag">Next.js 14</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
-      </div>
-      <span class="link-arrow" style="font-size:13.5px">View repository
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </span>
+      <div class="project-card-header"><h3 class="project-card-h3">Finance Tracker</h3><span class="project-badge">Live Demo</span></div>
+      <p class="project-card-p" data-i18n="proj.tracker.desc">A full-stack personal finance tracker — Next.js 14, FastAPI and PostgreSQL — containerized with Docker and deployed to production on Vercel + Railway.</p>
+      <div class="tags" style="margin-bottom:18px"><span class="tag">Next.js 14</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span></div>
+      <span class="link-arrow" style="font-size:13.5px" data-i18n="proj.view">View repository <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
     </a>
-    <a href="https://github.com/faiber1986/generador-datos-sinteticos" target="_blank" rel="noopener" class="project-card reveal reveal-d1">
-      <div class="project-card-header">
-        <h3 class="project-card-h3">Synthetic Data Generator</h3>
-        <span class="project-badge">Data Tooling</span>
-      </div>
-      <p class="project-card-p">A generator for privacy-safe, ML-ready synthetic datasets — producing realistic tabular data for model training and testing where production data can't be shared.</p>
-      <div class="tags" style="margin-bottom:18px">
-        <span class="tag">Python</span><span class="tag">Data Privacy</span><span class="tag">ML Datasets</span>
-      </div>
-      <span class="link-arrow" style="font-size:13.5px">View repository
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </span>
+    <a href="https://github.com/faiber1986/generador-datos-sinteticos" target="_blank" rel="noopener" class="project-card reveal">
+      <div class="project-card-header"><h3 class="project-card-h3">Synthetic Data Generator</h3><span class="project-badge">Data Tooling</span></div>
+      <p class="project-card-p" data-i18n="proj.synth.desc">A generator for privacy-safe, ML-ready synthetic datasets — producing realistic tabular data for model training and testing where production data can't be shared.</p>
+      <div class="tags" style="margin-bottom:18px"><span class="tag">Python</span><span class="tag">Data Privacy</span><span class="tag">ML Datasets</span></div>
+      <span class="link-arrow" style="font-size:13.5px" data-i18n="proj.view">View repository <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
     </a>
-    <a href="https://github.com/faiber1986/EasyFinance" target="_blank" rel="noopener" class="project-card reveal reveal-d2">
-      <div class="project-card-header">
-        <h3 class="project-card-h3">EasyFinance</h3>
-        <span class="project-badge">Fintech App</span>
-      </div>
-      <p class="project-card-p">A lightweight personal-finance toolkit for budgeting, expense tracking and money management — making everyday financial decisions simpler and more transparent.</p>
-      <div class="tags" style="margin-bottom:18px">
-        <span class="tag">Python</span><span class="tag">Budgeting</span><span class="tag">Personal Finance</span>
-      </div>
-      <span class="link-arrow" style="font-size:13.5px">View repository
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-      </span>
+    <a href="https://github.com/faiber1986/EasyFinance" target="_blank" rel="noopener" class="project-card reveal reveal-d1">
+      <div class="project-card-header"><h3 class="project-card-h3">EasyFinance</h3><span class="project-badge">Fintech App</span></div>
+      <p class="project-card-p" data-i18n="proj.easy.desc">A lightweight personal-finance toolkit for budgeting, expense tracking and money management — making everyday financial decisions simpler and more transparent.</p>
+      <div class="tags" style="margin-bottom:18px"><span class="tag">Python</span><span class="tag">Budgeting</span><span class="tag">Personal Finance</span></div>
+      <span class="link-arrow" style="font-size:13.5px" data-i18n="proj.view">View repository <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
     </a>
   </div>
 </section>
 
-<!-- ─── CREDENTIALS ────────────────────────────────────────────────────────── -->
+<!-- CREDENTIALS -->
 <section id="credentials">
-  <div class="reveal" style="max-width:640px;margin-bottom:48px">
-    <div class="label">Academic Foundation</div>
-    <h2 class="heading">Credentials &amp; training</h2>
-  </div>
+  <div class="reveal" style="max-width:640px;margin-bottom:48px"><div class="label" data-i18n="cred.label">Academic Foundation</div><h2 class="heading" data-i18n="cred.title">Credentials &amp; training</h2></div>
   <div class="cred-grid reveal">
-    <div class="cred-card">
-      <div class="cred-year">2021</div>
-      <h3 class="cred-title">Post-Graduate · Financial Risk Management</h3>
-      <div class="cred-school">Universidad de Medellín</div>
-      <p class="cred-desc">ML modeling, Value-at-Risk (VaR) modeling, and stochastic risk analysis.</p>
-    </div>
-    <div class="cred-card">
-      <div class="cred-year">2020</div>
-      <h3 class="cred-title">Post-Graduate · Tributary Legislation</h3>
-      <div class="cred-school">UNAULA</div>
-      <p class="cred-desc">Tax-compliance algorithms, automated regulatory reporting, and fiscal data integrity.</p>
-    </div>
-    <div class="cred-card">
-      <div class="cred-year">2018</div>
-      <h3 class="cred-title">Financial Engineer · Degree</h3>
-      <div class="cred-school">Universidad de Medellín</div>
-      <p class="cred-desc">Five-year quantitative degree — the foundation bridging finance and engineering.</p>
-    </div>
+    <div class="cred-card"><div class="cred-year">2021</div><h3 class="cred-title" data-i18n="cred.c1.title">Post-Graduate · Financial Risk Management</h3><div class="cred-school">Universidad de Medellín</div><p class="cred-desc" data-i18n="cred.c1.desc">ML modeling, Value-at-Risk (VaR) modeling, and stochastic risk analysis.</p></div>
+    <div class="cred-card"><div class="cred-year">2020</div><h3 class="cred-title" data-i18n="cred.c2.title">Post-Graduate · Tributary Legislation</h3><div class="cred-school">UNAULA</div><p class="cred-desc" data-i18n="cred.c2.desc">Tax-compliance algorithms, automated regulatory reporting, and fiscal data integrity.</p></div>
+    <div class="cred-card"><div class="cred-year">2018</div><h3 class="cred-title" data-i18n="cred.c3.title">Financial Engineer · Degree</h3><div class="cred-school">Universidad de Medellín</div><p class="cred-desc" data-i18n="cred.c3.desc">Five-year quantitative degree — the foundation bridging finance and engineering.</p></div>
   </div>
   <div class="further-training reveal">
-    <span class="further-label">Further training</span>
-    <div class="tags">
-      <span class="tag">Front-End Developer · Oracle ONE</span>
-      <span class="tag">Data Science 4 All · Correlation One</span>
-      <span class="tag">Data Scientist · Digital House</span>
-      <span class="tag">Data Scientist · EAFIT</span>
-      <span class="tag">Front-End · Comfenalco</span>
-    </div>
+    <span class="further-label" data-i18n="cred.further">Further training</span>
+    <div class="tags"><span class="tag">Front-End Developer · Oracle ONE</span><span class="tag">Data Science 4 All · Correlation One</span><span class="tag">Data Scientist · Digital House</span><span class="tag">Data Scientist · EAFIT</span><span class="tag">Front-End · Comfenalco</span></div>
   </div>
 </section>
 
-<!-- ─── CONTACT ───────────────────────────────────────────────────────────── -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <div class="reveal">
-      <div class="contact-badge">
-        <span class="contact-dot"></span>
-        For recruiters &amp; hiring leads
-      </div>
-      <h2 class="contact-h2">Hiring for fintech or AI?<br>Let's talk innovation.</h2>
-      <p class="contact-p">If you're building the next generation of financial architectures — and need someone who can take models from notebook to production — I'd love to connect. Available for senior roles, contract, and advisory.</p>
+      <div class="contact-badge"><span class="contact-dot"></span><span data-i18n="contact.badge">For recruiters &amp; hiring leads</span></div>
+      <h2 class="contact-h2" data-i18n="contact.title">Hiring for fintech or AI?<br>Let's talk innovation.</h2>
+      <p class="contact-p" data-i18n="contact.desc">If you're building the next generation of financial architectures — and need someone who can take models from notebook to production — I'd love to connect. Available for senior roles, contract, and advisory.</p>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="btn-cta">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.66V10.4H6.06v7.26h2.28zM7.2 9.42a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zm10.74 8.24v-4.16c0-2.22-1.18-3.26-2.76-3.26-1.27 0-1.84.7-2.16 1.19v-1.02h-2.28c.03.64 0 7.26 0 7.26h2.28v-4.05c0-.21.02-.41.08-.56.16-.41.54-.84 1.17-.84.83 0 1.16.63 1.16 1.55v3.9h2.27z"/></svg>
-          Connect on LinkedIn
-        </a>
-        <a href="assets/Faiber-Andres-Montes-CV.docx" download class="btn-cta-outline">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-          Download full résumé
-        </a>
+        <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="btn-cta"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.66V10.4H6.06v7.26h2.28zM7.2 9.42a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zm10.74 8.24v-4.16c0-2.22-1.18-3.26-2.76-3.26-1.27 0-1.84.7-2.16 1.19v-1.02h-2.28c.03.64 0 7.26 0 7.26h2.28v-4.05c0-.21.02-.41.08-.56.16-.41.54-.84 1.17-.84.83 0 1.16.63 1.16 1.55v3.9h2.27z"/></svg><span data-i18n="hero.linkedin">Connect on LinkedIn</span></a>
+        <a href="assets/Faiber-Andres-Montes-CV.docx" download class="btn-cta-outline"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span data-i18n="contact.cv">Download full résumé</span></a>
       </div>
     </div>
     <div class="contact-items reveal reveal-d1">
-      <a href="mailto:andresmono1986@hotmail.com" class="contact-item">
-        <div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-        <div>
-          <div class="contact-item-label">Email</div>
-          <div class="contact-item-value">andresmono1986@hotmail.com</div>
-        </div>
-      </a>
-      <a href="tel:+573504747211" class="contact-item">
-        <div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></div>
-        <div>
-          <div class="contact-item-label">Phone</div>
-          <div class="contact-item-value">+57 350 474 7211</div>
-        </div>
-      </a>
-      <a href="https://github.com/faiber1986" target="_blank" rel="noopener" class="contact-item">
-        <div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.64 3 8.57 7.18 9.96.53.1.72-.23.72-.5v-1.76c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.88 1.07a9.96 9.96 0 0 1 5.24 0c2-1.35 2.88-1.07 2.88-1.07.57 1.45.21 2.52.1 2.79.67.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 22.5 12 10.5 10.5 0 0 0 12 1.5z"/></svg></div>
-        <div>
-          <div class="contact-item-label">GitHub</div>
-          <div class="contact-item-value">github.com/faiber1986</div>
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="contact-item">
-        <div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.66V10.4H6.06v7.26h2.28zM7.2 9.42a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zm10.74 8.24v-4.16c0-2.22-1.18-3.26-2.76-3.26-1.27 0-1.84.7-2.16 1.19v-1.02h-2.28c.03.64 0 7.26 0 7.26h2.28v-4.05c0-.21.02-.41.08-.56.16-.41.54-.84 1.17-.84.83 0 1.16.63 1.16 1.55v3.9h2.27z"/></svg></div>
-        <div>
-          <div class="contact-item-label">LinkedIn</div>
-          <div class="contact-item-value">faiber-andres-montes</div>
-        </div>
-      </a>
+      <a href="mailto:andresmono1986@hotmail.com" class="contact-item"><div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><div class="contact-item-label" data-i18n="contact.email_label">Email</div><div class="contact-item-value">andresmono1986@hotmail.com</div></div></a>
+      <a href="tel:+573504747211" class="contact-item"><div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></div><div><div class="contact-item-label" data-i18n="contact.phone_label">Phone</div><div class="contact-item-value">+57 350 474 7211</div></div></a>
+      <a href="https://github.com/faiber1986" target="_blank" rel="noopener" class="contact-item"><div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.64 3 8.57 7.18 9.96.53.1.72-.23.72-.5v-1.76c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.88 1.07a9.96 9.96 0 0 1 5.24 0c2-1.35 2.88-1.07 2.88-1.07.57 1.45.21 2.52.1 2.79.67.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 22.5 12 10.5 10.5 0 0 0 12 1.5z"/></svg></div><div><div class="contact-item-label">GitHub</div><div class="contact-item-value">github.com/faiber1986</div></div></a>
+      <a href="https://www.linkedin.com/in/faiber-andres-montes/" target="_blank" rel="noopener" class="contact-item"><div class="contact-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.66V10.4H6.06v7.26h2.28zM7.2 9.42a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zm10.74 8.24v-4.16c0-2.22-1.18-3.26-2.76-3.26-1.27 0-1.84.7-2.16 1.19v-1.02h-2.28c.03.64 0 7.26 0 7.26h2.28v-4.05c0-.21.02-.41.08-.56.16-.41.54-.84 1.17-.84.83 0 1.16.63 1.16 1.55v3.9h2.27z"/></svg></div><div><div class="contact-item-label">LinkedIn</div><div class="contact-item-value">faiber-andres-montes</div></div></a>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ────────────────────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-copy">© 2026 Faiber Andres Montes Gómez · Financial Engineer &amp; AI Architect · Medellín, Colombia</div>
     <div class="footer-links">
-      <a href="#top">Home</a>
-      <a href="#impact">Impact</a>
-      <a href="#experience">Experience</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#top" data-i18n="nav.home">Home</a>
+      <a href="#impact" data-i18n="nav.impact">Impact</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
   </div>
 </footer>
 
 <script>
-/* ─── THEME ───────────────────────────────────────────────────────────── */
-(function(){
-  const root = document.documentElement;
-  const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
-  root.setAttribute('data-theme', saved);
-  updateToggleIcon(saved);
-  function updateToggleIcon(t){
-    const moon = document.getElementById('iconMoon');
-    const sun  = document.getElementById('iconSun');
-    if(!moon||!sun) return;
-    if(t==='dark'){moon.style.display='none';sun.style.display=''}
-    else{moon.style.display='';sun.style.display='none'}
+/* ══════════════════════════════════════════════════════
+   TRANSLATIONS
+══════════════════════════════════════════════════════ */
+var T = {
+  en: {
+    "nav.home":"Home","nav.impact":"Impact","nav.experience":"Experience","nav.capabilities":"Capabilities","nav.projects":"Projects","nav.credentials":"Credentials","nav.contact":"Contact","nav.connect":"Connect",
+    "hero.badge":"Open to senior Fintech & AI roles · Remote / Medellín (UTC−5)",
+    "hero.title1":"Financial Engineer","hero.title2":"AI & LLM Architect","hero.title3":"MLOps Lead",
+    "hero.desc":"Bridging high-stakes financial engineering with scalable, production-ready AI. I lead the <strong>\"Production Premium\"</strong> — turning models into high-availability systems that move real capital.",
+    "hero.linkedin":"Connect on LinkedIn","hero.cv":"Download CV","hero.badge_years":"yrs across finance<br>& production AI",
+    "metrics.latency":"latency reduction on risk models","metrics.trained":"professionals trained in AI","metrics.savings":"annual savings delivered","metrics.automated":"manual work automated",
+    "impact.label":"Impact Narrative","impact.title":"Scaling impact<br>from code to capital",
+    "impact.desc":"A leader in scaling high-availability APIs with <strong>Python, FastAPI, Docker & Snowflake</strong> — translating financial risk into production-ready AI.",
+    "impact.i1.title":"40% latency reduction at N-iX","impact.i1.desc":"Migrated legacy R credit-risk models to production Python on FastAPI, enabling real-time, API-based scoring with 90% test coverage.",
+    "impact.i2.title":"AI enablement for 1,000+ leaders","impact.i2.desc":"Catalyzed AI adoption at CESDE — teaching RAG and Prompt Engineering workflows that drove 25% productivity gains.",
+    "impact.i3.title":"$200K+ saved at Colanta","impact.i3.desc":"Deployed PyTorch & Scikit-learn demand-prediction models (+15% accuracy) and surfaced $50K+ in tax irregularities via PySpark on AWS.",
+    "impact.i4.title":"Autonomous agents, −15 hrs/week","impact.i4.desc":"Built RAG chatbots and research agents with LangChain, OpenAI/Claude and vector DBs — automating 100% of weekly reporting.",
+    "exp.label":"Work Experience","exp.title":"Career timeline",
+    "exp.e1.role":"Data Specialist & AI Engineer","exp.e1.period":"Mar 2026 – Present","exp.e1.company":"Freelance · Medellín",
+    "exp.e1.b1":"Architected automated research and content generation agents using LangChain and OpenAI/Claude APIs, reducing manual workflows by 15 hours per week.",
+    "exp.e1.b2":"Implemented AI governance and safety protocols, educating stakeholders on hallucination mitigation, bias detection, and ethical data privacy in LLM deployments.",
+    "exp.e1.b3":"Built and deployed custom RAG-based chatbots and financial analysis agents using FastAPI and Vector Databases (Pinecone, Chroma), automating 100% of weekly reporting.",
+    "exp.e2.role":"AI Instructor","exp.e2.period":"Oct – Dec 2025","exp.e2.company":"CESDE · Medellín",
+    "exp.e2.b1":"Led the AI Enablement strategy for over 500 professionals, teaching Prompt Engineering and RAG workflows to boost operational productivity by 25%.",
+    "exp.e2.b2":"Developed curriculum on Responsible AI — bias mitigation, data privacy, and ethical LLM integration (ChatGPT, Claude, Gemini) for corporate leadership.",
+    "exp.e2.b3":"Automated administrative workflows using no-code/low-code AI tools, reducing manual task time by 15 hours per week per student.",
+    "exp.e3.role":"Data Engineer & Python Developer","exp.e3.period":"Dec 2024 – Aug 2025","exp.e3.company":"N-iX · Medellín",
+    "exp.e3.b1":"Orchestrated migration of credit risk models from legacy R to production Python (FastAPI), reducing latency by 40% and enabling real-time API-based scoring.",
+    "exp.e3.b2":"Architected ETL/ELT pipelines on AWS (Glue, S3, Redshift) to process multi-terabyte datasets, ensuring 99.9% data integrity for global supply chain reporting.",
+    "exp.e3.b3":"Engineered testing suite with Pytest — 90% code coverage, eliminating critical bugs in high-stakes financial data catalogs.",
+    "exp.e3.b4":"Optimized SQL and data modeling (Star Schema), reducing cloud compute costs by 25% and accelerating BI dashboard refreshes.",
+    "exp.e4.role":"Data Specialist & Financial Engineer","exp.e4.period":"Feb 2023 – Dec 2024","exp.e4.company":"Freelance · Medellín",
+    "exp.e4.b1":"Designed financial dashboards and REST APIs (FastAPI) for corporate clients, automating 100% of weekly financial reporting cycles.",
+    "exp.e4.b2":"Built predictive time-series models, outperforming manual benchmarks by 20% in predictive accuracy.",
+    "exp.e4.b3":"Managed Snowflake & AWS environments implementing DataOps best practices that reduced data downtime by 65%.",
+    "exp.e5.role":"Data Scientist & Project Finance Analyst","exp.e5.period":"Aug 2021 – Jan 2023","exp.e5.company":"Colanta · Medellín",
+    "exp.e5.b1":"Deployed demand-prediction models using PyTorch and Scikit-learn (+15% accuracy), saving an estimated $200K in annual logistics waste.",
+    "exp.e5.b2":"Used PySpark on AWS to process large-scale accounting datasets, identifying $50K+ in tax-related irregularities via advanced feature engineering.",
+    "exp.e5.b3":"Visualized financial KPIs with Power BI and Qlik Sense, reducing time-to-insight for quarterly risk assessments from days to minutes.",
+    "cap.label":"Capabilities Matrix","cap.title":"Four disciplines,<br>one production mindset",
+    "cap.c1.title":"AI & LLM Specialist","cap.c1.desc":"Designing reliable LLM systems — from retrieval to guardrails — for high-stakes financial use.",
+    "cap.c2.title":"MLOps & Data Architecture","cap.c2.desc":"Shipping high-availability systems with reproducible pipelines and infrastructure as code.",
+    "cap.c3.title":"Financial Engineering","cap.c3.desc":"Quantitative risk and forecasting grounded in formal financial engineering training.",
+    "cap.c4.title":"Leadership & Training","cap.c4.desc":"Turning non-technical organizations into AI-fluent teams through hands-on enablement.",
+    "proj.label":"Featured Work · Latest from GitHub","proj.title":"Engineering solutions, shipped",
+    "proj.flagship":"★ FLAGSHIP PROJECT","proj.view":"View repository",
+    "proj.finsight.desc":"An end-to-end investment-intelligence platform: four ML modules — portfolio optimization, price forecasting, credit-risk scoring and market sentiment — unified by an LLM assistant, with full MLOps + LLMOps observability.",
+    "proj.arch":"System architecture","proj.arch.frontend":"Investment dashboard","proj.arch.retrain":"Retraining",
+    "proj.terra.desc":"Commercial real-estate rent forecasting and tenant default-risk scoring — paired with an agentic lease-abstraction pipeline that reads and structures lease documents.",
+    "proj.tracker.desc":"A full-stack personal finance tracker — Next.js 14, FastAPI and PostgreSQL — containerized with Docker and deployed on Vercel + Railway.",
+    "proj.synth.desc":"A generator for privacy-safe, ML-ready synthetic datasets — producing realistic tabular data for model training and testing where production data can't be shared.",
+    "proj.easy.desc":"A lightweight personal-finance toolkit for budgeting, expense tracking and money management.",
+    "cred.label":"Academic Foundation","cred.title":"Credentials & training",
+    "cred.c1.title":"Post-Graduate · Financial Risk Management","cred.c1.desc":"ML modeling, Value-at-Risk (VaR) modeling, and stochastic risk analysis.",
+    "cred.c2.title":"Post-Graduate · Tributary Legislation","cred.c2.desc":"Tax-compliance algorithms, automated regulatory reporting, and fiscal data integrity.",
+    "cred.c3.title":"Financial Engineer · Degree","cred.c3.desc":"Five-year quantitative degree — the foundation bridging finance and engineering.",
+    "cred.further":"Further training",
+    "contact.badge":"For recruiters & hiring leads",
+    "contact.title":"Hiring for fintech or AI?<br>Let's talk innovation.",
+    "contact.desc":"If you're building the next generation of financial architectures — and need someone who can take models from notebook to production — I'd love to connect. Available for senior roles, contract, and advisory.",
+    "contact.cv":"Download full résumé","contact.email_label":"Email","contact.phone_label":"Phone"
+  },
+  es: {
+    "nav.home":"Inicio","nav.impact":"Impacto","nav.experience":"Experiencia","nav.capabilities":"Capacidades","nav.projects":"Proyectos","nav.credentials":"Formación","nav.contact":"Contacto","nav.connect":"Conectar",
+    "hero.badge":"Abierto a roles senior en Fintech & IA · Remoto / Medellín (UTC−5)",
+    "hero.title1":"Ingeniero Financiero","hero.title2":"Arquitecto de IA & LLM","hero.title3":"Líder de MLOps",
+    "hero.desc":"Uniendo la ingeniería financiera de alto impacto con sistemas de IA escalables y listos para producción. Lidero el <strong>\"Production Premium\"</strong> — convirtiendo modelos en sistemas de alta disponibilidad que mueven capital real.",
+    "hero.linkedin":"Conectar en LinkedIn","hero.cv":"Descargar CV","hero.badge_years":"años en finanzas<br>& IA en producción",
+    "metrics.latency":"reducción de latencia en modelos de riesgo","metrics.trained":"profesionales capacitados en IA","metrics.savings":"ahorros anuales generados","metrics.automated":"trabajo manual automatizado",
+    "impact.label":"Narrativa de Impacto","impact.title":"Escalando impacto<br>del código al capital",
+    "impact.desc":"Líder en escalar APIs de alta disponibilidad con <strong>Python, FastAPI, Docker & Snowflake</strong> — traduciendo el riesgo financiero en IA lista para producción.",
+    "impact.i1.title":"40% menos latencia en N-iX","impact.i1.desc":"Migré modelos de riesgo crediticio de R legado a Python productivo en FastAPI, habilitando scoring en tiempo real con 90% de cobertura de pruebas.",
+    "impact.i2.title":"Habilitación de IA para 1.000+ líderes","impact.i2.desc":"Catalicé la adopción de IA en CESDE — enseñando flujos de RAG e Ingeniería de Prompts que impulsaron un 25% de ganancia en productividad.",
+    "impact.i3.title":"Más de $200K ahorrados en Colanta","impact.i3.desc":"Desplegué modelos de predicción de demanda con PyTorch & Scikit-learn (+15% de precisión) y detecté irregularidades fiscales de +$50K mediante PySpark en AWS.",
+    "impact.i4.title":"Agentes autónomos, −15 hrs/semana","impact.i4.desc":"Construí chatbots RAG y agentes de investigación con LangChain, OpenAI/Claude y bases de datos vectoriales — automatizando el 100% del reporte semanal.",
+    "exp.label":"Experiencia Laboral","exp.title":"Trayectoria profesional",
+    "exp.e1.role":"Especialista en Datos & Ingeniero de IA","exp.e1.period":"Mar 2026 – Actualidad","exp.e1.company":"Freelance · Medellín",
+    "exp.e1.b1":"Diseñé agentes automatizados de investigación y generación de contenido con LangChain y APIs de OpenAI/Claude, reduciendo flujos manuales en 15 horas por semana.",
+    "exp.e1.b2":"Implementé protocolos de gobernanza y seguridad en IA, educando a stakeholders en mitigación de alucinaciones, detección de sesgos y privacidad ética en despliegues LLM.",
+    "exp.e1.b3":"Construí y desplegué chatbots RAG y agentes de análisis financiero con FastAPI y bases de datos vectoriales (Pinecone, Chroma), automatizando el 100% del reporte semanal.",
+    "exp.e2.role":"Instructor de IA","exp.e2.period":"Oct – Dic 2025","exp.e2.company":"CESDE · Medellín",
+    "exp.e2.b1":"Lideré la estrategia de habilitación en IA para más de 500 profesionales, enseñando Ingeniería de Prompts y flujos RAG para aumentar la productividad operativa en un 25%.",
+    "exp.e2.b2":"Desarrollé currículo sobre IA Responsable — mitigación de sesgos, privacidad de datos e integración ética de LLMs (ChatGPT, Claude, Gemini) para líderes corporativos.",
+    "exp.e2.b3":"Automaticé flujos de trabajo con herramientas no-code/low-code, reduciendo el tiempo de tareas manuales en 15 horas por semana.",
+    "exp.e3.role":"Ingeniero de Datos & Desarrollador Python","exp.e3.period":"Dic 2024 – Ago 2025","exp.e3.company":"N-iX · Medellín",
+    "exp.e3.b1":"Orquesté la migración de modelos de riesgo crediticio de R legado a Python productivo (FastAPI), reduciendo la latencia un 40% y habilitando scoring en tiempo real.",
+    "exp.e3.b2":"Arquitecté pipelines ETL/ELT en AWS (Glue, S3, Redshift) para procesar datasets de múltiples terabytes, garantizando 99.9% de integridad de datos.",
+    "exp.e3.b3":"Diseñé suite de pruebas con Pytest — 90% de cobertura, eliminando bugs críticos en catálogos de datos financieros.",
+    "exp.e3.b4":"Optimicé SQL y modelado de datos (Star Schema), logrando reducción del 25% en costos de cómputo en la nube.",
+    "exp.e4.role":"Especialista en Datos & Ingeniero Financiero","exp.e4.period":"Feb 2023 – Dic 2024","exp.e4.company":"Freelance · Medellín",
+    "exp.e4.b1":"Diseñé dashboards financieros y REST APIs (FastAPI) para clientes corporativos, automatizando el 100% de los ciclos de reporte semanal.",
+    "exp.e4.b2":"Construí modelos predictivos de series de tiempo, superando benchmarks manuales en un 20% de precisión predictiva.",
+    "exp.e4.b3":"Administré entornos de Snowflake & AWS implementando mejores prácticas de DataOps que redujeron el tiempo de inactividad en un 65%.",
+    "exp.e5.role":"Científico de Datos & Analista de Project Finance","exp.e5.period":"Ago 2021 – Ene 2023","exp.e5.company":"Colanta · Medellín",
+    "exp.e5.b1":"Desplegué modelos de predicción de demanda con PyTorch y Scikit-learn (+15% de precisión), generando ahorros de $200K en desperdicios logísticos anuales.",
+    "exp.e5.b2":"Usé PySpark en AWS para procesar grandes volúmenes de datos contables, identificando más de $50K en irregularidades fiscales.",
+    "exp.e5.b3":"Visualicé KPIs financieros con Power BI y Qlik Sense, reduciendo el análisis de riesgo trimestral de días a minutos.",
+    "cap.label":"Matriz de Capacidades","cap.title":"Cuatro disciplinas,<br>una mentalidad de producción",
+    "cap.c1.title":"Especialista en IA & LLM","cap.c1.desc":"Diseñando sistemas LLM confiables — desde recuperación hasta salvaguardas — para uso financiero de alto impacto.",
+    "cap.c2.title":"MLOps & Arquitectura de Datos","cap.c2.desc":"Desplegando sistemas de alta disponibilidad con pipelines reproducibles e infraestructura como código.",
+    "cap.c3.title":"Ingeniería Financiera","cap.c3.desc":"Riesgo cuantitativo y pronóstico fundamentados en formación formal de ingeniería financiera.",
+    "cap.c4.title":"Liderazgo & Capacitación","cap.c4.desc":"Transformando organizaciones no técnicas en equipos fluentes en IA mediante habilitación práctica.",
+    "proj.label":"Proyectos Destacados · Último en GitHub","proj.title":"Soluciones de ingeniería, desplegadas",
+    "proj.flagship":"★ PROYECTO INSIGNIA","proj.view":"Ver repositorio",
+    "proj.finsight.desc":"Plataforma de inteligencia de inversión de punta a punta: cuatro módulos ML — optimización de portafolio, pronóstico de precios, scoring de riesgo crediticio y sentimiento de mercado — unificados por un asistente LLM, con observabilidad MLOps + LLMOps completa.",
+    "proj.arch":"Arquitectura del sistema","proj.arch.frontend":"Dashboard de inversión","proj.arch.retrain":"Reentrenamiento",
+    "proj.terra.desc":"Pronóstico de rentas de bienes raíces comerciales y scoring de riesgo de arrendatarios — junto con un pipeline agéntico de abstracción de contratos de arrendamiento.",
+    "proj.tracker.desc":"Rastreador de finanzas personales full-stack — Next.js 14, FastAPI y PostgreSQL — contenerizado con Docker y desplegado en Vercel + Railway.",
+    "proj.synth.desc":"Generador de datasets sintéticos listos para ML y seguros para la privacidad — produciendo datos tabulares realistas para entrenamiento donde los datos reales no pueden compartirse.",
+    "proj.easy.desc":"Kit de herramientas de finanzas personales para presupuesto, seguimiento de gastos y gestión de dinero — decisiones financieras más simples y transparentes.",
+    "cred.label":"Formación Académica","cred.title":"Credenciales & formación",
+    "cred.c1.title":"Posgrado · Gestión de Riesgo Financiero","cred.c1.desc":"Modelado ML, Valor en Riesgo (VaR) y análisis de riesgo estocástico.",
+    "cred.c2.title":"Posgrado · Legislación Tributaria","cred.c2.desc":"Algoritmos de cumplimiento tributario, reporte regulatorio automatizado e integridad de datos fiscales.",
+    "cred.c3.title":"Ingeniero Financiero · Pregrado","cred.c3.desc":"Carrera cuantitativa de cinco años — la base que une finanzas e ingeniería.",
+    "cred.further":"Formación complementaria",
+    "contact.badge":"Para reclutadores y líderes de contratación",
+    "contact.title":"¿Contratando en fintech o IA?<br>Hablemos de innovación.",
+    "contact.desc":"Si estás construyendo la próxima generación de arquitecturas financieras — y necesitas a alguien que lleve modelos del notebook a producción — me encantaría conectar. Disponible para roles senior, contratos y asesorías.",
+    "contact.cv":"Descargar hoja de vida completa","contact.email_label":"Correo","contact.phone_label":"Teléfono"
   }
-  document.getElementById('themeToggle').addEventListener('click', function(){
-    const cur = root.getAttribute('data-theme');
-    const next = cur==='dark' ? 'light' : 'dark';
+};
+
+/* ══════════════════════════════════════════════════════
+   LANG ENGINE
+══════════════════════════════════════════════════════ */
+var currentLang = localStorage.getItem('lang') ||
+  (navigator.language && navigator.language.startsWith('es') ? 'es' : 'en');
+
+function applyLang(lang) {
+  var dict = T[lang];
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  // update metric suffix for h/wk vs h/sem
+  var el = document.querySelector('[data-count="15"]');
+  if (el) el.setAttribute('data-suffix', lang === 'es' ? 'h/sem' : 'h/wk');
+  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  document.getElementById('btnES').classList.toggle('active', lang === 'es');
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  applyLang(lang);
+}
+
+/* ══════════════════════════════════════════════════════
+   THEME
+══════════════════════════════════════════════════════ */
+(function() {
+  var root = document.documentElement;
+  var saved = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+  root.setAttribute('data-theme', saved);
+  syncIcon(saved);
+  function syncIcon(t) {
+    document.getElementById('iconMoon').style.display = t === 'dark' ? 'none' : '';
+    document.getElementById('iconSun').style.display  = t === 'dark' ? '' : 'none';
+  }
+  document.getElementById('themeToggle').addEventListener('click', function() {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
-    updateToggleIcon(next);
+    syncIcon(next);
   });
 })();
 
-/* ─── MOBILE MENU ─────────────────────────────────────────────────────── */
-function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
-document.getElementById('hamburgerBtn').addEventListener('click', function(){
+/* ══════════════════════════════════════════════════════
+   MOBILE MENU
+══════════════════════════════════════════════════════ */
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
   document.getElementById('mobileMenu').classList.toggle('open');
 });
 
-/* ─── SCROLL REVEAL ───────────────────────────────────────────────────── */
-(function(){
-  const els = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}
-      });
-    },{threshold:0.1,rootMargin:'0px 0px -48px 0px'});
-    els.forEach(function(el){io.observe(el)});
-  } else {
-    els.forEach(function(el){el.classList.add('visible')});
-  }
+/* ══════════════════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════════════════ */
+(function() {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
 })();
 
-/* ─── COUNT-UP ────────────────────────────────────────────────────────── */
-(function(){
-  const counted = new Set();
-  function runCount(el){
-    const target = parseFloat(el.getAttribute('data-count'));
-    const suffix = el.getAttribute('data-suffix') || '';
-    const prefix = el.getAttribute('data-prefix') || '';
-    const dur = 1400, start = performance.now();
-    const fmt = function(v){return prefix + Math.round(v).toLocaleString('en-US') + suffix};
-    function tick(now){
-      const p = Math.min((now - start) / dur, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt(target * eased);
-      if(p < 1) requestAnimationFrame(tick);
+/* ══════════════════════════════════════════════════════
+   COUNT-UP
+══════════════════════════════════════════════════════ */
+(function() {
+  var counted = new Set();
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !counted.has(e.target)) {
+        counted.add(e.target); runCount(e.target); io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(function(el) { io.observe(el); });
+  function runCount(el) {
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
+    var dur = 1400, start = performance.now();
+    function tick(now) {
+      var p = Math.min((now - start) / dur, 1);
+      el.textContent = prefix + Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US') + suffix;
+      if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }
-  const io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting && !counted.has(e.target)){
-        counted.add(e.target);
-        runCount(e.target);
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.5});
-  document.querySelectorAll('[data-count]').forEach(function(el){io.observe(el)});
 })();
 
-/* ─── BACK TO TOP ─────────────────────────────────────────────────────── */
-(function(){
-  const btn = document.getElementById('backTop');
-  window.addEventListener('scroll', function(){
-    btn.classList.toggle('show', window.scrollY > 500);
-  }, {passive:true});
+/* ══════════════════════════════════════════════════════
+   BACK TO TOP
+══════════════════════════════════════════════════════ */
+window.addEventListener('scroll', function() {
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 500);
+}, { passive: true });
+
+/* ══════════════════════════════════════════════════════
+   ACTIVE NAV
+══════════════════════════════════════════════════════ */
+(function() {
+  var links = document.querySelectorAll('.nav-links a');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) links.forEach(function(l) {
+        l.style.color = l.getAttribute('href') === '#' + e.target.id ? 'var(--accent)' : '';
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('section[id]').forEach(function(s) { io.observe(s); });
 })();
 
-/* ─── ACTIVE NAV LINK ─────────────────────────────────────────────────── */
-(function(){
-  const sections = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('.nav-links a');
-  const io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        links.forEach(function(l){
-          l.style.color = l.getAttribute('href')==='#'+e.target.id ? 'var(--accent)' : '';
-        });
-      }
-    });
-  },{rootMargin:'-40% 0px -55% 0px'});
-  sections.forEach(function(s){io.observe(s)});
-})();
+/* ══════════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════════ */
+applyLang(currentLang);
 </script>
 </body>
 </html>
