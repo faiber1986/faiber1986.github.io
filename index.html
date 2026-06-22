@@ -732,9 +732,10 @@ function applyLang(lang) {
   if (el) el.setAttribute('data-suffix', lang === 'es' ? 'h/sem' : 'h/wk');
   document.getElementById('btnEN').classList.toggle('active', lang === 'en');
   document.getElementById('btnES').classList.toggle('active', lang === 'es');
-  var cvFile = lang === 'es'
+  var cvVersion = '20260622b';
+  var cvFile = (lang === 'es'
     ? 'assets/Faiber-Andres-Montes-CV-ES.docx'
-    : 'assets/Faiber-Andres-Montes-CV.docx';
+    : 'assets/Faiber-Andres-Montes-CV.docx') + '?v=' + cvVersion;
   document.getElementById('cvDownload1').href = cvFile;
   document.getElementById('cvDownload2').href = cvFile;
 }
